@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>AstromApp</title>
+		<link rel="icon" href="imagenes/icono.png">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,93 +15,105 @@
 			    background-image: url('imagenes/fondo.jpg');
 			    background-repeat: no-repeat;
 			    background-attachment: fixed;
-			    padding: 7em;
+			    padding: 5em;
 			}
 
 		</style>
 	</head>
 	<body>
 		<!-- Imagen de fondo -->
-		<div class="w3-sidebar w3-bar-block w3-black" style="width:15%; margin-top: -3em; left: 0"> 
-  			<a href="#" class="w3-bar-item w3-button w3-hover-dark-gray">M16 - El águila</a>
-  			<a href="#" class="w3-bar-item w3-button w3-hover-dark-gray">M1 - El cangrejo</a>
+
+		<nav role="navigation" class="navbar navbar-light navbar-fixed-top" id="superior" style="background-color: black; opacity: 0.7 ">
+		<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<img src="imagenes/icono.png" id="icono" style="width: 2.5em; height: 2.5em; float: left; margin-left: 0.5em; margin-top: 0.5em">
+				<a href="#" class="navbar-brand" style="color: white">Tu guía a los astros</a>
+			</div>
+
+			<!-- Collection of nav links and other content for toggling -->
+			<div id="navbarCollapse" class="collapse navbar-collapse navbar-right" style="margin-right: 2em">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="index.html" style="color: white">Inicio</a>
+					</li>
+					<li>
+						<a href="Gallery.html" style="color: white">Explorar</a>
+					</li>
+					<li>
+						<a href="#" style="color: white">Acerca de</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	
+		<div class="w3-sidebar w3-bar-block w3-black" style="width:15%; margin-top: -1.7em; left: 0"> 
+				<a href="#aguila" class="w3-bar-item w3-button w3-hover-dark-gray">M16 - El águila</a>
+				<a href="#" class="w3-bar-item w3-button w3-hover-dark-gray">M1 - El cangrejo</a>
 		</div>
-				<nav role="navigation" class="navbar navbar-light navbar-fixed-top" id="superior" style="background-color: black; opacity: 0.7 ">
-				<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<img src="imagenes/icono.png" id="icono" style="width: 3em; height: 3em; float: left; margin: 0.5em">
-						<a href="#" class="navbar-brand" style="color: white">Tu guía a los astros</a>
-					</div>
 
-					<!-- Collection of nav links and other content for toggling -->
-					<div id="navbarCollapse" class="collapse navbar-collapse navbar-right" style="margin-right: 2em">
-						<ul class="nav navbar-nav">
-							<li class="active">
-								<a href="index.html" style="color: white">Inicio</a>
-							</li>
-							<li>
-								<a href="Gallery.html" style="color: white">Explorar</a>
-							</li>
-							<li>
-								<a href="#" style="color: white">Acerca de</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			
-			<!-- Contenido de la página -->
-			<div s>
-				<div class="container" style="background-color: #242424; margin-left: 15%">
-					<div class="row">
-						<div style="margin-top: 2em; margin-bottom: 2em; margin-left: 2em; margin-right: 2em">
-							<!-- Imágenes -->
-							<div id="myCarousel" class="carousel slide" data-ride="carousel" style="float: left ">
-						    	<!-- Indicators -->
-						    	<ol class="carousel-indicators">
-						    		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						    		<li data-target="#myCarousel" data-slide-to="1"></li>
-						    	</ol>
+		<!-- Contenido de la página -->
+		<div class="row" style="margin-left: 15%">
+			<div class="col-md-10" style="background-color: #242424" id="aguila">
+				<div><center style="color: white"><h2>M16 - El águila</h2></center></div>
+				<div style="margin-bottom: 2em; margin-left: 2em; margin-right: 2em">
+					<!-- Imágenes -->
+					<div id="myCarousel" class="carousel slide" data-ride="carousel" style="float: left ">
+				    	<!-- Indicators -->
+				    	<ol class="carousel-indicators">
+				    		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				    		<li data-target="#myCarousel" data-slide-to="1"></li>
+				    	</ol>
 
-							    <!-- Wrapper for slides -->
-							    <div class="carousel-inner">
-							    	<div class="item active">
-							        	<img src="imagenes/aguila.jpg" alt="El águila" style="width:100%;">
-							        	<div class="carousel-caption d-none d-md-block"><h2>El águila</h2></div>
-							    	</div>
+					    <!-- Wrapper for slides -->
+					    <div class="carousel-inner">
+					    	<div class="item active">
+					        	<img src="imagenes/aguila.jpg" alt="El águila" style="width:100%;">
+					        	<div class="carousel-caption d-none d-md-block"><h2>El águila</h2></div>
+					    	</div>
 
-							    	<div class="item">
-										<img src="imagenes/corazon.jpg" alt="Corazón y alma" style="width:100%;">
-							        	<div class="carousel-caption d-none d-md-block"><h2>Corazón y alma</h2></div>
-							    	</div>
-							    </div>
+					    	<div class="item">
+								<img src="imagenes/pilares.jpg" alt="Pilares de la creación" style="width:100%;">
+					        	<div class="carousel-caption d-none d-md-block"><h2>Pilares de la creación</h2></div>
+					    	</div>
+					    </div>
 
-							    <!-- Left and right controls -->
-							    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-							    	<span class="glyphicon glyphicon-chevron-left"></span>
-							    	<span class="sr-only">Anterior</span>
-							    </a>
-							    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-							    	<span class="glyphicon glyphicon-chevron-right"></span>
-							    	<span class="sr-only">Siguiente</span>
-							    </a>
-						  	</div>
-						</div>
-						<div style="margin-top: 2em; margin-bottom: 2em; margin-left: 2em; margin-right: 2em">
-							<!-- Texto -->
-				  			<div id="texto2" style="float: left"><h4 style="color: gray">La nebulosa del águila forma parte del objeto astronómico catalogado como M16 (Messier 16). Se encuentra en la constelación Serpens (la serpiente).</h4></div>
-				  			<div id="texto2" style="float: left"><h4 style="color: gray">En una parte de la nebulosa están los "pilares de la creación", que forman una de las imágenes más populares de las obtenidas por el telescopio espacial Hubble.</h4></div>
-				  			<div id="texto2" style="float: left"><h4 style="color: gray">La nebulosa brillante de emisión (región HII) que abarca toda la zona está catalogada como IC 4703. Todo el complejo se encuentra a  7000 años luz.</h4></div>
-						</div>
-					</div>
+					    <!-- Left and right controls -->
+					    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					    	<span class="glyphicon glyphicon-chevron-left"></span>
+					    	<span class="sr-only">Anterior</span>
+					    </a>
+					    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+					    	<span class="glyphicon glyphicon-chevron-right"></span>
+					    	<span class="sr-only">Siguiente</span>
+					    </a>
+				  	</div>
+				</div>
+				<div style="margin-top: 2em; margin-bottom: 2em; margin-left: 2em; margin-right: 2em">
+					<!-- Texto -->
+		  			<div id="texto2" style="float: left; margin-top: 2em"><h4 style="color: gray">La nebulosa del águila forma parte del objeto astronómico catalogado como M16 (Messier 16). Se encuentra en la constelación Serpens (la serpiente).</h4></div>
+		  			<div id="texto2" style="float: left"><h4 style="color: gray">En una parte de la nebulosa están los "pilares de la creación", que forman una de las imágenes más populares de las obtenidas por el telescopio espacial Hubble.</h4></div>
+		  			<div id="texto2" style="float: left; margin-bottom: 2em"><h4 style="color: gray">La nebulosa brillante de emisión (región HII) que abarca toda la zona está catalogada como IC 4703. Todo el complejo se encuentra a  7000 años luz.</h4></div>
 				</div>
 			</div>
-				<!-- Fin de la página: -->	
+		</div>
+		<!-- Fin de la página: -->	
 
+		<!-- LINKS
+		https://www.w3schools.com/css/css_rwd_viewport.asp
+		https://www.w3schools.com/html/html_responsive.asp
+		https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
+		https://www.w3schools.com/howto/howto_css_full_page.asp
+		http://www.color-hex.com/
+		http://www.color-hex.com/
+		https://www.w3schools.com/cssref/css3_pr_background-size.asp
+		https://www.w3schools.com/w3css/w3css_color_classes.asp
+		https://www.w3schools.com/cssref/pr_background-attachment.asp
+		1200 * 800 TODAS LAS IMÁGENES-->
 	</body>
 </html>
