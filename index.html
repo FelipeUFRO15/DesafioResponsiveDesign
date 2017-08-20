@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>AstromApp</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>		<style type="text/css">
+
+
+			body { 
+			    background-image: url('imagenes/fondo.jpg');
+			    background-repeat: no-repeat;
+			    background-attachment: fixed;
+			    padding: 7em;
+			}
+
+			.bg {
+			    background-image: url("imagenes/fondo.jpg");
+			    height: 100%; 
+			    background-position: center;
+			    background-repeat: no-repeat;
+			    background-attachment: fixed;
+			    background-size: 100%;
+			    padding-top: 6.5em;
+			}
+		</style>
+	</head>
+	<body >
+		<!-- Imagen de fondo -->
+		<nav role="navigation" class="navbar navbar-light navbar-fixed-top" id="superior" style="background-color: black; opacity: 0.7 ">
+		<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<img src="imagenes/icono.png" id="icono" style="width: 3em; height: 3em; float: left; margin: 0.5em">
+				<a href="#" class="navbar-brand" style="color: white">Tu guía a los astros</a>
+			</div>
+
+			<!-- Collection of nav links and other content for toggling -->
+			<div id="navbarCollapse" class="collapse navbar-collapse navbar-right" style="margin-right: 2em">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="index.html" style="color: white">Inicio</a>
+					</li>
+					<li>
+						<a href="gallery.html" style="color: white">Explorar</a>
+					</li>
+					<li>
+						<a href="#" style="color: white">Acerca de</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Contenido de la página -->
+		<div class="container" style="background-color: #242424">
+			<div class="row">
+				<div class="col-md-8" style="margin-top: 2em; margin-bottom: 2em">
+					<!-- Imágenes -->
+					<div id="myCarousel" class="carousel slide" data-ride="carousel" style="float: left ">
+				    	<!-- Indicators -->
+				    	<ol class="carousel-indicators">
+				    		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				    		<li data-target="#myCarousel" data-slide-to="1"></li>
+				    	</ol>
+
+					    <!-- Wrapper for slides -->
+					    <div class="carousel-inner">
+					    	<div class="item active">
+					        	<img src="imagenes/aguila.jpg" alt="El águila" style="width:100%;">
+					        	<div class="carousel-caption d-none d-md-block"><h2>El águila</h2></div>
+					    	</div>
+
+					    	<div class="item">
+								<img src="imagenes/corazon.jpg" alt="Corazón y alma" style="width:100%;">
+					        	<div class="carousel-caption d-none d-md-block"><h2>Corazón y alma</h2></div>
+					    	</div>
+					    </div>
+
+					    <!-- Left and right controls -->
+					    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					    	<span class="glyphicon glyphicon-chevron-left"></span>
+					    	<span class="sr-only">Anterior</span>
+					    </a>
+					    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+					    	<span class="glyphicon glyphicon-chevron-right"></span>
+					    	<span class="sr-only">Siguiente</span>
+					    </a>
+				  	</div>
+				</div>
+				<div class="col-md-4" style="margin-top: 2em; margin-bottom: 2em">
+					<!-- Texto -->
+		 			<div id="texto1" style="float: left"><h2 style="color: lightgray">AstromApp es una aplicación web que abre una ventana al universo a través de la internet.</h2></div>
+		  			<div id="texto2" style="float: left"><h4 style="color: gray">Con un catálogo en crecimiento de objetos estelares registrados oficialmente por distintos institutos científicos, AstromApp busca ser un centro de información de fácil acceso, con una presentación intuitiva y soporte para los navegadores más importantes del mercado.</h4></div>
+				</div>
+			</div>
+		</div>
+			<!-- Fin de la página: -->	
+	</body>
+</html>
