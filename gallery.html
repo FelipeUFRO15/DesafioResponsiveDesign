@@ -17,6 +17,10 @@
 			    background-attachment: fixed;
 			    padding: 5em;
 			}
+
+			#uno:hover {
+				color: black;
+			}
 		</style>
 	</head>
 	<body>
@@ -49,56 +53,191 @@
 			</div>
 		</nav>
 	
-		<div class="w3-sidebar w3-bar-block w3-black" style="width:15%; margin-top: -1.7em; left: 0"> 
-				<a href="#aguila" class="w3-bar-item w3-button w3-hover-dark-gray">M16 - El águila</a>
-				<a href="#" class="w3-bar-item w3-button w3-hover-dark-gray">M1 - El cangrejo</a>
+		<div class="w3-sidebar w3-bar-block w3-black" style="width:15%; margin-top: -1.7em; left: 0; opacity: 0.7 "> 
+			<div class="dropdown">
+				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="width:100%; background-color: black">Nebulosas
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" style="background-color: gray">
+			    	<li><a href="#aguila" style="color: white" onclick="mostrarAguila()">M16 - El águila</a></li>
+			    	<li class="divider"></li>
+			    	<li><a href="#cangrejo" style="color: white" onclick="mostrarCangrejo()">M1 - El cangrejo</a></li>
+			    	<li class="divider"></li>
+			    	<li><a href="#caballo" style="color: white" onclick="mostrarCaballo()">B33 - El caballo</a></li>
+				</ul>
+			</div>
 		</div>
 
 		<!-- Contenido de la página -->
-		<div class="row" style="margin-left: 15%">
-			<div class="col-md-10" style="background-color: #242424" id="aguila">
-				<div><center style="color: white"><h2>M16 - El águila</h2></center></div>
-				<div style="margin-bottom: 2em; margin-left: 2em; margin-right: 2em">
-					<!-- Imágenes -->
-					<div id="myCarousel" class="carousel slide" data-ride="carousel" style="float: left ">
-				    	<!-- Indicators -->
-				    	<ol class="carousel-indicators">
-				    		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				    		<li data-target="#myCarousel" data-slide-to="1"></li>
-				    	</ol>
+		<div class="container" style="background-color: #242424; width: 60%">
+			<div class="row"  id="aguila">
+				<div class="col-md-12">
+					<div><center style="color: white"><h2>M16 - El águila</h2></center></div>
+					<div style="margin-bottom: 2em; margin-left: 2em; margin-right: 2em">
+						<!-- Imágenes -->
+						<div id="carouselAguila" class="carousel slide" data-ride="carousel" style="float: left ">
+					    	<!-- Indicators -->
+					    	<ol class="carousel-indicators">
+					    		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					    		<li data-target="#myCarousel" data-slide-to="1"></li>
+					    	</ol>
 
-					    <!-- Wrapper for slides -->
-					    <div class="carousel-inner">
-					    	<div class="item active">
-					        	<img src="imagenes/aguila.jpg" alt="El águila" style="width:100%;">
-					        	<div class="carousel-caption d-none d-md-block"><h2>El águila</h2></div>
-					    	</div>
+						    <!-- Wrapper for slides -->
+						    <div class="carousel-inner">
+						    	<div class="item active">
+						        	<img src="imagenes/aguila.jpg" alt="El águila" style="width:100%;">
+						        	<div class="carousel-caption d-none d-md-block"><h2>El águila</h2></div>
+						    	</div>
 
-					    	<div class="item">
-								<img src="imagenes/pilares.jpg" alt="Pilares de la creación" style="width:100%;">
-					        	<div class="carousel-caption d-none d-md-block"><h2>Pilares de la creación</h2></div>
-					    	</div>
-					    </div>
+						    	<div class="item">
+									<img src="imagenes/pilares.jpg" alt="Pilares de la creación" style="width:100%;">
+						        	<div class="carousel-caption d-none d-md-block"><h2>Pilares de la creación</h2></div>
+						    	</div>
+						    </div>
 
-					    <!-- Left and right controls -->
-					    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-					    	<span class="glyphicon glyphicon-chevron-left"></span>
-					    	<span class="sr-only">Anterior</span>
-					    </a>
-					    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-					    	<span class="glyphicon glyphicon-chevron-right"></span>
-					    	<span class="sr-only">Siguiente</span>
-					    </a>
-				  	</div>
+						    <!-- Left and right controls -->
+						    <a class="left carousel-control" href="#carouselAguila" data-slide="prev">
+						    	<span class="glyphicon glyphicon-chevron-left"></span>
+						    	<span class="sr-only">Anterior</span>
+						    </a>
+						    <a class="right carousel-control" href="#carouselAguila" data-slide="next">
+						    	<span class="glyphicon glyphicon-chevron-right"></span>
+						    	<span class="sr-only">Siguiente</span>
+						    </a>
+					  	</div>
+					</div>
+					<div style="margin-top: 2em; margin-bottom: 2em; margin-left: 2em; margin-right: 2em" id="textoAguila">
+						<!-- Texto -->
+			  			<div id="texto2" style="float: left; margin-top: 2em"><h4 style="color: gray">La nebulosa del águila forma parte del objeto astronómico catalogado como M16 (Messier 16). Se encuentra en la constelación Serpens (la serpiente).</h4></div>
+			  			<div id="texto2" style="float: left"><h4 style="color: gray">En una parte de la nebulosa están los "pilares de la creación", que forman una de las imágenes más populares de las obtenidas por el telescopio espacial Hubble.</h4></div>
+			  			<div id="texto2" style="float: left; margin-bottom: 2em"><h4 style="color: gray">La nebulosa brillante de emisión (región HII) que abarca toda la zona está catalogada como IC 4703. Todo el complejo se encuentra a  7000 años luz.</h4></div>
+					</div>
 				</div>
-				<div style="margin-top: 2em; margin-bottom: 2em; margin-left: 2em; margin-right: 2em">
-					<!-- Texto -->
-		  			<div id="texto2" style="float: left; margin-top: 2em"><h4 style="color: gray">La nebulosa del águila forma parte del objeto astronómico catalogado como M16 (Messier 16). Se encuentra en la constelación Serpens (la serpiente).</h4></div>
-		  			<div id="texto2" style="float: left"><h4 style="color: gray">En una parte de la nebulosa están los "pilares de la creación", que forman una de las imágenes más populares de las obtenidas por el telescopio espacial Hubble.</h4></div>
-		  			<div id="texto2" style="float: left; margin-bottom: 2em"><h4 style="color: gray">La nebulosa brillante de emisión (región HII) que abarca toda la zona está catalogada como IC 4703. Todo el complejo se encuentra a  7000 años luz.</h4></div>
+			</div>
+
+			<div class="row" style="display: none" id="cangrejo">
+				<div class="col-md-12">
+					<div><center style="color: white"><h2>M1 - El cangrejo</h2></center></div>
+					<div style="margin-bottom: 2em; margin-left: 2em; margin-right: 2em">
+						<!-- Imágenes -->
+						<div id="carouselCangrejo" class="carousel slide" data-ride="carousel" style="float: left ">
+					    	<!-- Indicators -->
+					    	<ol class="carousel-indicators">
+					    		<li data-target="#carouselCangrejo" data-slide-to="0" class="active"></li>
+					    		<li data-target="#carouselCangrejo" data-slide-to="1"></li>
+					    	</ol>
+
+						    <!-- Wrapper for slides -->
+						    <div class="carousel-inner">
+						    	<div class="item active">
+						        	<img src="imagenes/cangrejo.jpg" alt="El águila" style="width:100%;">
+						        	<div class="carousel-caption d-none d-md-block"><h2>El cangrejo</h2></div>
+						    	</div>
+
+						    	<div class="item">
+									<img src="imagenes/cangrejo1.jpg" alt="Pilares de la creación" style="width:100%;">
+						        	<div class="carousel-caption d-none d-md-block"><h2>El cangrejo</h2></div>
+						    	</div>
+						    </div>
+
+						    <!-- Left and right controls -->
+						    <a class="left carousel-control" href="#carouselCangrejo" data-slide="prev">
+						    	<span class="glyphicon glyphicon-chevron-left"></span>
+						    	<span class="sr-only">Anterior</span>
+						    </a>
+						    <a class="right carousel-control" href="#carouselCangrejo" data-slide="next">
+						    	<span class="glyphicon glyphicon-chevron-right"></span>
+						    	<span class="sr-only">Siguiente</span>
+						    </a>
+					  	</div>
+					</div>
+					<div style="margin-top: 2em; margin-bottom: 2em; margin-left: 2em; margin-right: 2em">
+						<!-- Texto -->
+			  			<div id="texto2" style="float: left; margin-top: 2em"><h4 style="color: gray">Es el resto de una supernova que fue observada y documentada, como una estrella visible a la luz del día, por astrónomos chinos y árabes el 4 de julio de 1054. La explosión se mantuvo visible durante 22 meses.</h4></div>
+			  			<div id="texto2" style="float: left"><h4 style="color: gray">El centro de la nebulosa contiene un púlsar, denominado PSR B0531+21, que gira sobre sí mismo a 30 revoluciones por segundo, emitiendo también pulsos de radiación que van desde los rayos gamma a las ondas de radio.</h4></div>
+			  			<div id="texto2" style="float: left; margin-bottom: 2em"><h4 style="color: gray">El descubrimiento de la nebulosa produjo la primera evidencia que concluye que las explosiones de supernova producen pulsares.</h4></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" style="display: none" id="caballo">
+				<div class="col-md-12">
+					<div><center style="color: white"><h2>B33 - Cabeza de caballo</h2></center></div>
+					<div style="margin-bottom: 2em; margin-left: 2em; margin-right: 2em">
+						<!-- Imágenes -->
+						<div id="carouselCaballo" class="carousel slide" data-ride="carousel" style="float: left ">
+					    	<!-- Indicators -->
+					    	<ol class="carousel-indicators">
+					    		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					    		<li data-target="#myCarousel" data-slide-to="1"></li>
+					    	</ol>
+
+						    <!-- Wrapper for slides -->
+						    <div class="carousel-inner">
+						    	<div class="item active">
+						        	<img src="imagenes/caballo.jpg" alt="El águila" style="width:100%;">
+						        	<div class="carousel-caption d-none d-md-block"><h2>Cabeza de caballo</h2></div>
+						    	</div>
+
+						    	<div class="item">
+									<img src="imagenes/cangrejo1.jpg" alt="Pilares de la creación" style="width:100%;">
+						        	<div class="carousel-caption d-none d-md-block"><h2>IC 434</h2></div>
+						    	</div>
+						    </div>
+
+						    <!-- Left and right controls -->
+						    <a class="left carousel-control" href="#carouselCaballo" data-slide="prev">
+						    	<span class="glyphicon glyphicon-chevron-left"></span>
+						    	<span class="sr-only">Anterior</span>
+						    </a>
+						    <a class="right carousel-control" href="#carouselCaballo" data-slide="next">
+						    	<span class="glyphicon glyphicon-chevron-right"></span>
+						    	<span class="sr-only">Siguiente</span>
+						    </a>
+					  	</div>
+					</div>
+					<div style="margin-top: 2em; margin-bottom: 2em; margin-left: 2em; margin-right: 2em">
+						<!-- Texto -->
+			  			<div id="texto2" style="float: left; margin-top: 2em"><h4 style="color: gray">La nebulosa Cabeza de Caballo o Barnard 33 (B33), es una nube de gas fría y oscura, situada a unos 1500 años luz de la Tierra, al sur del extremo izquierdo del cinturón de Orión. Forma parte del Complejo de Nubes Moleculares de Orión</h4></div>
+			  			<div id="texto2" style="float: left"><h4 style="color: gray">Esta nebulosa oscura es visible por contraste, ya que aparece por delante de la nebulosa de emisión IC 434. Por su forma es la más familiar de las nebulosas de absorción.</h4></div>
+			  			<div id="texto2" style="float: left; margin-bottom: 2em"><h4 style="color: gray">La estrella más brillante, situada a la izquierda de la nebulosa, es la popular Alnitak (ζ Orionis) del cinturón de Orión.</h4></div>
+					</div>
 				</div>
 			</div>
 		</div>
+
+		<script>
+			function mostrarAguila() {
+			    var a = document.getElementById('aguila');
+			    var c = document.getElementById('cangrejo');
+			    var b = document.getElementById('caballo');
+			    	c.style.display = 'none';
+			    	b.style.display = 'none';
+			        a.style.display = 'block';
+			}
+		</script>
+
+		<script>
+			function mostrarCangrejo() {
+			    var a = document.getElementById('aguila');
+			    var c = document.getElementById('cangrejo');
+			    var b = document.getElementById('caballo');
+			    	a.style.display = 'none';
+			    	b.style.display = 'none';
+			        c.style.display = 'block';
+			}
+		</script>
+
+		<script>
+			function mostrarCaballo() {
+			    var a = document.getElementById('aguila');
+			    var c = document.getElementById('cangrejo');
+			    var b = document.getElementById('caballo');
+			    	a.style.display = 'none';
+			        c.style.display = 'none';
+			        b.style.display = 'block';
+			}
+		</script>
 		<!-- Fin de la página: -->	
 
 		<!-- LINKS
